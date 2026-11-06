@@ -1,0 +1,54 @@
+<!doctype html><html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Task 8 results</title>
+<style>body{font:16px system-ui;background:#f0f4f8;color:#182a3e;margin:0}main{max-width:850px;margin:auto;padding:32px}section{background:white;padding:24px;border-radius:14px;margin:20px 0}select{font:inherit;padding:7px}svg{width:100%;height:auto}table{border-collapse:collapse;width:100%}td,th{padding:8px;text-align:left;border-bottom:1px solid #ddd}a{color:#145da0}</style></head>
+<body>
+<main><h1>Task 8 · Audio experiments</h1><section><h2>YESNO</h2><p>KNN, SVM and Random Forest each classified 96 of 96 test words correctly, across 12 recordings from one speaker.</p><a href="Audio_Assignment.ipynb">Notebook</a> · <a href="results/YESNO_Classifier_Results.csv">Classifier results</a></section>
+<section><h2>VOiCES explorer</h2><label for="bg">Background </label><select id="bg"><option value="none">No added distractor</option><option value="musi">Music</option><option value="tele">Television</option><option value="babb">Speech babble</option></select>
+<p id="vad"></p><p>YAMNet predictions at threshold 0.30</p><svg id="timeline" viewBox="0 0 720 120" role="img" aria-label="Predicted speech and music intervals"></svg>
+<table><thead><tr><th>Event</th><th>Start (s)</th><th>End (s)</th><th>Peak score</th></tr></thead><tbody id="rows"></tbody></table></section>
+<section aria-labelledby="report-title">
+  <h2 id="report-title">Task 8 Experiment Report</h2>
+  <p>Digital Speech Processing · Muntadher Sadoon Kadhim</p>
+
+  <h3>1. Objective</h3>
+  <p>This assignment compares three classifiers on the torchaudio YESNO dataset and demonstrates voice activity detection and audio event detection on the VOiCES subset.</p>
+
+  <h3>2. YESNO Word Classification</h3>
+  <p>I segmented the recordings into individual words and matched them to the labels in the filenames. I excluded one recording after hearing seven words where the filename provided eight labels. The remaining 59 recordings yielded 472 word samples, including 223 No and 249 Yes.</p>
+  <p>For each word, I extracted 13 MFCCs and computed the mean and standard deviation of each coefficient over time, giving 26 features. I split the data by recording to keep words from the same recording together. The training set contained 376 words from 47 recordings. The test set contained 96 words from 12 separate recordings.</p>
+  <p>KNN, SVM, and Random Forest each classified all 96 test words correctly (43 No and 53 Yes), reaching 100% accuracy and 100% macro F1. The test recordings came from one speaker, so this experiment measured performance on held-out recordings from that speaker.</p>
+  <p><a href="figures/yesno_confusion_matrices.png">View the confusion matrices</a></p>
+
+  <h3>3. Voice Activity Detection on VOiCES</h3>
+  <p>The subset inventory contained 908 WAV files sampled at 16 kHz. I selected one recording from each of four conditions for the demonstration: no added distractor, music, television, and background babble.</p>
+  <p>I used the pretrained Silero VAD model to estimate when speech was active. In the music example, it predicted six speech regions covering 13.48 of 16.16 seconds. Measuring detection accuracy would require comparing the predictions with reference timestamps.</p>
+  <p><a href="figures/voices_vad.png">View the speech regions on the waveforms</a></p>
+
+  <h3>4. Audio Event Detection on VOiCES</h3>
+  <p>I applied pretrained YAMNet to the same four recordings. I used a score threshold of 0.30 for Speech and Music and grouped consecutive windows above that threshold into approximate event intervals. The table shows each interval's start, end, and peak model score.</p>
+  <p>In the music example, YAMNet detected music around 1.44–2.40 s, 8.16–9.60 s, and 11.04–12.00 s. The timeline can show overlapping speech and music because the two event scores are evaluated separately. Changing the background menu selects a different recording and updates the Silero summary and the YAMNet timeline and table.</p>
+  <p><a href="figures/voices_events.png">View the event scores over time</a></p>
+
+  <h3>5. Conclusion</h3>
+  <p>The three classifiers gave the same test result on YESNO. On the selected VOiCES recordings, Silero estimated speech activity, while YAMNet identified approximate speech and music intervals. The interactive display lets readers compare the predictions across the four recordings.</p>
+</section>
+</main>
+<script>
+const data={"VOICES_Event_Intervals": [{"Background": "none", "Event": "Speech", "Start_s": "0.0", "End_s": "16.065", "Peak_score": "0.9992228150367737"}, {"Background": "musi", "Event": "Speech", "Start_s": "0.0", "End_s": "1.44", "Peak_score": "0.79142165184021"}, {"Background": "musi", "Event": "Speech", "Start_s": "2.4", "End_s": "8.64", "Peak_score": "0.998529851436615"}, {"Background": "musi", "Event": "Speech", "Start_s": "9.6", "End_s": "16.1600625", "Peak_score": "0.9964491724967957"}, {"Background": "musi", "Event": "Music", "Start_s": "1.44", "End_s": "2.4", "Peak_score": "0.3935334384441376"}, {"Background": "musi", "Event": "Music", "Start_s": "8.16", "End_s": "9.600000000000001", "Peak_score": "0.49779343605041504"}, {"Background": "musi", "Event": "Music", "Start_s": "11.04", "End_s": "12.0", "Peak_score": "0.34768033027648926"}, {"Background": "tele", "Event": "Speech", "Start_s": "0.0", "End_s": "15.84", "Peak_score": "0.9998643398284912"}, {"Background": "babb", "Event": "Speech", "Start_s": "0.0", "End_s": "15.84", "Peak_score": "0.9996554255485535"}], "VOICES_VAD_Summary": [{"Background": "none", "Duration_s": "16.065", "Speech_regions": "4", "Detected_speech_s": "14.032", "Detected_speech_%": "87.34516028633675"}, {"Background": "musi", "Duration_s": "16.1600625", "Speech_regions": "6", "Detected_speech_s": "13.48", "Detected_speech_%": "83.41551896844459"}, {"Background": "tele", "Duration_s": "15.84", "Speech_regions": "5", "Detected_speech_s": "14.67", "Detected_speech_%": "92.61363636363636"}, {"Background": "babb", "Duration_s": "15.84", "Speech_regions": "5", "Detected_speech_s": "14.798", "Detected_speech_%": "93.42171717171718"}]};
+const bg=document.querySelector('#bg');
+function draw(){
+ const v=data.VOICES_VAD_Summary.find(r=>r.Background===bg.value);
+ const events=data.VOICES_Event_Intervals.filter(r=>r.Background===bg.value);
+ const duration=Number(v.Duration_s), x=t=>100+600*t/duration;
+ document.querySelector('#vad').textContent='Silero VAD: '+v.Speech_regions+' speech regions · '+Number(v.Detected_speech_s).toFixed(2)+' of '+duration.toFixed(2)+' seconds';
+ let chart='<text x="0" y="30">Speech</text><text x="0" y="65">Music</text>';
+ for(const y of [12,47]) chart+='<rect x="100" y="'+y+'" width="600" height="24" rx="4" fill="#e7edf4"/>';
+ for(const r of events) chart+='<rect x="'+x(+r.Start_s)+'" y="'+(r.Event==='Speech'?12:47)+'" width="'+(x(+r.End_s)-x(+r.Start_s))+'" height="24" rx="4" fill="'+(r.Event==='Speech'?'#2563a9':'#b85b13')+'"><title>'+r.Event+' '+(+r.Start_s).toFixed(2)+'–'+(+r.End_s).toFixed(2)+' s</title></rect>';
+ for(let t=0;t<=duration;t+=4) chart+='<text x="'+x(t)+'" y="100" font-size="14">'+t+' s</text>';
+ document.querySelector('#timeline').innerHTML=chart;
+ document.querySelector('#rows').innerHTML=events.map(r=>'<tr><td>'+r.Event+'</td><td>'+Number(r.Start_s).toFixed(2)+'</td><td>'+Number(r.End_s).toFixed(2)+'</td><td>'+Number(r.Peak_score).toFixed(3)+'</td></tr>').join('');
+}
+bg.addEventListener('change',draw);draw();
+</script>
+</body>
+</html>

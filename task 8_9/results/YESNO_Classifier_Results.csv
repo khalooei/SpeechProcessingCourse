@@ -1,0 +1,4 @@
+﻿Classifier,Accuracy (%),Macro F1 (%),Correct,Errors,Test words
+KNN,100.0,100.0,96,0,96
+SVM,100.0,100.0,96,0,96
+Random Forest,100.0,100.0,96,0,96
