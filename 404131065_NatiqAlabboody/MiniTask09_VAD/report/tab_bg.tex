@@ -1,0 +1,10 @@
+\begin{table}[H]\centering\small\caption{Background classification on VOiCES (4 classes, 908 files). Accuracy and macro F1 (\%) over 5 folds grouped by sentence, mean $\pm$ std. Chance is 25\%.}\label{tab:bg}
+\setlength{\tabcolsep}{4pt}\begin{tabular}{lcccc}\toprule & \multicolumn{2}{c}{MFCC statistics} & \multicolumn{2}{c}{+ energy levels}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Classifier & Accuracy & Macro F1 & Accuracy & Macro F1\\\midrule
+SVM (RBF) & 72.6 $\pm$ 3.8 & 72.0 & 73.9 $\pm$ 2.1 & 73.3\\
+Neural network (MLP) & 68.5 $\pm$ 3.9 & 68.1 & 72.0 $\pm$ 4.1 & 71.7\\
+Logistic regression & 67.0 $\pm$ 3.3 & 66.3 & 72.6 $\pm$ 2.9 & 72.0\\
+Random forest & 67.0 $\pm$ 2.0 & 65.8 & 68.5 $\pm$ 3.3 & 66.6\\
+k-NN & 60.2 $\pm$ 4.1 & 57.7 & 60.3 $\pm$ 3.2 & 57.7\\
+Gaussian naive Bayes & 63.0 $\pm$ 3.8 & 61.6 & 62.0 $\pm$ 3.1 & 60.1\\
+\bottomrule\end{tabular}\end{table}

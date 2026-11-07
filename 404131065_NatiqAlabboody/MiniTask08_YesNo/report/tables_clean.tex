@@ -1,0 +1,14 @@
+\begin{table}[H]\centering\small
+\caption{Clean test results. CV columns: 5-fold cross-validation repeated 5 times, split by recording (25 folds, 2360 test predictions in all). Hold-out: 30 training and 29 test recordings (232 test words).}\label{tab:clean}
+\setlength{\tabcolsep}{4pt}\begin{tabular}{lccccc}\toprule
+Classifier & Hold-out acc. (\%) & Hold-out errors & CV acc. (\%) & CV F1 (\%) & CV errors\\\midrule
+SVM (RBF) & 100.00 & 0 & 99.79 $\pm$ 0.43 & 99.81 & 5\\
+Neural network (MLP) & 100.00 & 0 & 100.00 $\pm$ 0.00 & 100.00 & 0\\
+Logistic regression & 100.00 & 0 & 100.00 $\pm$ 0.00 & 100.00 & 0\\
+Random forest & 100.00 & 0 & 100.00 $\pm$ 0.00 & 100.00 & 0\\
+k-NN & 99.57 & 1 & 99.75 $\pm$ 0.45 & 99.77 & 6\\
+Gaussian naive Bayes & 100.00 & 0 & 99.79 $\pm$ 0.43 & 99.81 & 5\\
+\midrule
+Majority class & -- & -- & 52.75 $\pm$ 1.17 & -- & --\\
+Time-domain features (SVM) & -- & -- & 81.93 $\pm$ 4.78 & -- & --\\
+\bottomrule\end{tabular}\end{table}

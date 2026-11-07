@@ -1,0 +1,12 @@
+\begin{table}[H]\centering\small
+\caption{Accuracy (\%) on noisy test words, mean $\pm$ std over 5 folds.}\label{tab:noise}
+\setlength{\tabcolsep}{2.5pt}\footnotesize\begin{tabular}{lcccccc}\toprule
+& \multicolumn{3}{c}{Trained on clean words} & \multicolumn{3}{c}{Trained on clean and noisy words}\\\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Classifier & 10 dB & 5 dB & 0 dB & 10 dB & 5 dB & 0 dB\\\midrule
+SVM (RBF) & 72.3 $\pm$ 9.4 & 60.6 $\pm$ 7.3 & 54.7 $\pm$ 1.5 & 100.0 $\pm$ 0.0 & 98.5 $\pm$ 1.2 & 92.8 $\pm$ 2.5\\
+Neural network (MLP) & 89.1 $\pm$ 3.1 & 73.0 $\pm$ 7.9 & 54.1 $\pm$ 5.5 & 100.0 $\pm$ 0.0 & 98.9 $\pm$ 0.7 & 94.9 $\pm$ 1.3\\
+Logistic regression & 89.2 $\pm$ 2.5 & 80.9 $\pm$ 4.1 & 69.1 $\pm$ 6.7 & 100.0 $\pm$ 0.0 & 98.1 $\pm$ 1.1 & 93.8 $\pm$ 2.3\\
+Random forest & 88.6 $\pm$ 7.3 & 67.2 $\pm$ 10.0 & 51.7 $\pm$ 4.5 & 100.0 $\pm$ 0.0 & 98.3 $\pm$ 1.2 & 93.2 $\pm$ 2.2\\
+k-NN & 78.9 $\pm$ 8.8 & 62.0 $\pm$ 10.0 & 52.1 $\pm$ 7.1 & 98.1 $\pm$ 1.6 & 89.9 $\pm$ 3.3 & 74.2 $\pm$ 3.9\\
+Gaussian naive Bayes & 93.2 $\pm$ 7.3 & 58.4 $\pm$ 19.3 & 48.5 $\pm$ 3.3 & 98.8 $\pm$ 1.1 & 82.0 $\pm$ 4.6 & 55.7 $\pm$ 3.7\\
+\bottomrule\end{tabular}\end{table}

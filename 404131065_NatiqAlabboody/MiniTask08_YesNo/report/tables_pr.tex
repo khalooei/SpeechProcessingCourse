@@ -1,0 +1,10 @@
+\begin{table}[H]\centering\small
+\caption{Cross-validation precision and recall (\%) with ``yes'' as the positive class, and the confusion counts summed over all 25 test folds.}\label{tab:pr}
+\begin{tabular}{lcccccc}\toprule Classifier & Precision & Recall & True no & False yes & False no & True yes\\\midrule
+SVM (RBF) & 99.60 & 100.00 & 1110 & 5 & 0 & 1245\\
+Neural network (MLP) & 100.00 & 100.00 & 1115 & 0 & 0 & 1245\\
+Logistic regression & 100.00 & 100.00 & 1115 & 0 & 0 & 1245\\
+Random forest & 100.00 & 100.00 & 1115 & 0 & 0 & 1245\\
+k-NN & 99.68 & 99.84 & 1111 & 4 & 2 & 1243\\
+Gaussian naive Bayes & 99.60 & 100.00 & 1110 & 5 & 0 & 1245\\
+\bottomrule\end{tabular}\end{table}

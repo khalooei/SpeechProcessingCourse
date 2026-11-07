@@ -1,0 +1,10 @@
+\begin{table}[H]\centering\small
+\caption{Average cost per training fold and per word on the 2-core machine used here. Fit time includes the grid search, and naive Bayes has no grid, so its figure is not directly comparable.}\label{tab:cost}
+\begin{tabular}{lcc}\toprule Classifier & Fit with tuning (s) & Prediction (ms/word)\\\midrule
+SVM (RBF) & 0.10 & 0.014\\
+Neural network (MLP) & 0.89 & 0.007\\
+Logistic regression & 0.06 & 0.006\\
+Random forest & 1.71 & 0.103\\
+k-NN & 0.05 & 0.012\\
+Gaussian naive Bayes & 0.00 & 0.006\\
+\bottomrule\end{tabular}\end{table}
