@@ -6,3 +6,5 @@
 *.xml
 403231102_KawtherAlgharban/MiniTask08_YesNo/data/waves_yesno/README~
 403231102_KawtherAlgharban/MiniTask08_YesNo/data/waves_yesno/README
+/403231102_KawtherAlgharban/MiniTask09_VAD/data
+*.pyc
