@@ -1,0 +1,12 @@
+\begin{table}[H]\centering\small
+\caption{Accuracy (\%) with 26 log filter bank energies (FB) and with MFCCs, on the same splits and the same noise.}\label{tab:fbank}
+\setlength{\tabcolsep}{4pt}\begin{tabular}{lcccccc}\toprule
+& \multicolumn{2}{c}{Clean words} & \multicolumn{2}{c}{10 dB, clean training} & \multicolumn{2}{c}{0 dB, multi-condition}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Classifier & FB & MFCC & FB & MFCC & FB & MFCC\\\midrule
+SVM (RBF) & 99.66 & 99.79 & 52.7 & 72.3 & 90.5 & 92.8\\
+Neural network (MLP) & 99.62 & 100.00 & 52.7 & 89.1 & 90.3 & 94.9\\
+Logistic regression & 100.00 & 100.00 & 52.7 & 89.2 & 88.4 & 93.8\\
+Random forest & 100.00 & 100.00 & 67.8 & 88.6 & 91.4 & 93.2\\
+k-NN & 99.66 & 99.75 & 60.4 & 78.9 & 62.6 & 74.2\\
+Gaussian naive Bayes & 99.79 & 99.79 & 74.5 & 93.2 & 47.9 & 55.7\\
+\bottomrule\end{tabular}\end{table}
