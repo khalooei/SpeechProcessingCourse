@@ -1,0 +1,7 @@
+model,cv_mean,cv_std,test_acc,precision,recall,f1,train_time_s
+SVM (RBF),0.9934,0.009,0.9792,0.96,1.0,0.9796,0.001
+Neural Network (MLP),1.0,0.0,1.0,1.0,1.0,1.0,0.0269
+k-NN (k=5),1.0,0.0,0.9931,0.9863,1.0,0.9931,0.0011
+Random Forest,0.9977,0.0045,0.9931,0.9863,1.0,0.9931,0.0961
+Logistic Regression,1.0,0.0,1.0,1.0,1.0,1.0,0.0011
+Gaussian Naive Bayes,0.9979,0.0042,0.9931,0.9863,1.0,0.9931,0.0006

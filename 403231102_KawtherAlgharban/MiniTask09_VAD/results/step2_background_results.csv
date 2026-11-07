@@ -1,0 +1,19 @@
+feature_set,model,accuracy,macro_f1,time_s
+A: whole recording,SVM (RBF),0.7093,0.7042,0.07
+A: whole recording,Neural Network (MLP),0.6784,0.6742,0.40
+A: whole recording,k-NN (k=5),0.5661,0.5541,0.05
+A: whole recording,Random Forest,0.6520,0.6423,2.02
+A: whole recording,Logistic Regression,0.6740,0.6728,0.03
+A: whole recording,Gaussian Naive Bayes,0.6244,0.6166,0.01
+B: pauses only,SVM (RBF),0.8667,0.8658,0.04
+B: pauses only,Neural Network (MLP),0.8524,0.8500,0.30
+B: pauses only,k-NN (k=5),0.7963,0.7935,0.01
+B: pauses only,Random Forest,0.8326,0.8314,1.94
+B: pauses only,Logistic Regression,0.8789,0.8781,0.03
+B: pauses only,Gaussian Naive Bayes,0.7841,0.7817,0.01
+C: whole + pauses,SVM (RBF),0.8535,0.8523,0.07
+C: whole + pauses,Neural Network (MLP),0.8370,0.8344,0.30
+C: whole + pauses,k-NN (k=5),0.7159,0.7084,0.01
+C: whole + pauses,Random Forest,0.8293,0.8278,2.38
+C: whole + pauses,Logistic Regression,0.8469,0.8469,0.03
+C: whole + pauses,Gaussian Naive Bayes,0.7412,0.7384,0.01
