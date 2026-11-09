@@ -1,0 +1,5 @@
+Model,Actual_No_Predicted_No,Actual_No_Predicted_Yes,Actual_Yes_Predicted_No,Actual_Yes_Predicted_Yes
+SVM,43,0,0,53
+KNN,43,0,0,53
+Random Forest,43,0,0,53
+MLP Neural Network,43,0,0,53

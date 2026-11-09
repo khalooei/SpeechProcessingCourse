@@ -1,0 +1,5 @@
+Background,Recordings,Mean_Duration_s,Mean_Energy_Speech_Ratio,Mean_Silero_Speech_Ratio,Mean_Frame_Agreement,Std_Frame_Agreement,Mean_Energy_Only_Ratio,Mean_Silero_Only_Ratio
+babb,10,14.953,0.6409,0.8916,0.749,0.0959,0.0002,0.2508
+musi,10,16.018,0.6375,0.8553,0.7644,0.1391,0.0088,0.2267
+none,10,15.5415,0.7357,0.8348,0.8884,0.0509,0.0062,0.1054
+tele,10,15.813,0.731,0.8524,0.8662,0.0662,0.0062,0.1276

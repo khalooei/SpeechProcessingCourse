@@ -1,0 +1,5 @@
+Model,CV_Accuracy_Mean,CV_Accuracy_Std,CV_F1_Mean,CV_F1_Std
+SVM,1,0,1,0
+KNN,1,0,1,0
+Random Forest,1,0,1,0
+MLP Neural Network,1,0,1,0

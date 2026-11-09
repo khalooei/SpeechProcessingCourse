@@ -1,0 +1,5 @@
+Model,Accuracy,Precision_Yes,Recall_Yes,F1_Yes,Training_Time_seconds
+SVM,1.0000,1.0000,1.0000,1.0000,0.017912
+KNN,1.0000,1.0000,1.0000,1.0000,0.005055
+Random Forest,1.0000,1.0000,1.0000,1.0000,0.413030
+MLP Neural Network,1.0000,1.0000,1.0000,1.0000,0.163639
