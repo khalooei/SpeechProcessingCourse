@@ -1,0 +1,20 @@
+Mini Task 09 - VOiCES | Baraa Atmeesh | 403131113
+Usable recordings: 908; unique speakers: 104
+Background training recordings: 653; testing recordings: 255
+Speaker overlap: 0
+Chosen background model (training CV): MLP (48,24)
+Chosen features: Low-energy 30%
+Train-only CV macro F1: 0.8430
+Holdout accuracy: 0.8118
+Holdout macro F1: 0.7993
+VAD matched pairs: 108; train pairs: 80; test pairs: 28
+VAD energy threshold (training only): 0.050
+
+VAD metrics against automatic reference:
+                   method     frames  accuracy  precision  recall     f1  false_alarm   miss
+            Always speech 44268.0000    0.8843     0.8843  1.0000 0.9386       1.0000 0.0000
+          Adaptive energy 44268.0000    0.9349     0.9699  0.9561 0.9629       0.2271 0.0439
+Frame logistic regression 44268.0000    0.9236     0.9940  0.9191 0.9551       0.0424 0.0809
+         Silero (distant) 44268.0000    0.9889     0.9934  0.9941 0.9937       0.0508 0.0059
+Saved figures: 7
+Saved result tables: 8

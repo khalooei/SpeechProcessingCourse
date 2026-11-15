@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+soundfile
+scikit-learn
+matplotlib
+torch
+silero-vad
+nbformat

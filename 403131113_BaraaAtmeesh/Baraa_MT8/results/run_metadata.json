@@ -1,0 +1,16 @@
+{
+  "recordings_total": 60,
+  "recordings_accepted": 59,
+  "recordings_excluded": 1,
+  "words_used": 472,
+  "yes_words": 249,
+  "no_words": 223,
+  "train_words": 352,
+  "test_words": 120,
+  "train_recordings": 44,
+  "test_recordings": 15,
+  "feature_dimension": 40,
+  "cv_folds": 4,
+  "seed": 2026,
+  "segmentation_note": "Energy-peak selection was checked against visualization; the unresolved recording was excluded."
+}

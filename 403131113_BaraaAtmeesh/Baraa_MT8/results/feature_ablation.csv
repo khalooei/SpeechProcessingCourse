@@ -1,0 +1,7 @@
+Feature set,Model,Test balanced accuracy
+Log-frequency band statistics,Linear SVM,1.0
+Log-frequency band statistics,Extra Trees,0.9918032786885246
+Spectral descriptors only,Linear SVM,0.9344262295081966
+Spectral descriptors only,Extra Trees,0.9259516532370102
+All 40 features,Linear SVM,1.0
+All 40 features,Extra Trees,0.9918032786885246
